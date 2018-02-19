@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Water Tracker</string>
+    <string name="ounces_of_water">0</string>
+    <string name= "date_day">0</string>
+</resources>

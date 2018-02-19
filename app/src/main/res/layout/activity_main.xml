@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context="matthew.macfarquhar.com.watertracker.MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Water Tracker"
+        android:textSize="32sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="16dp"/>
+
+    <TextView
+        android:id="@+id/progress_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You drank 64/64 oz of \nwater today!"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"/>
+
+    <Button
+        android:id="@+id/increment_water_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="64dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/round_button"
+        android:text="+"
+        android:textColor="@color/colorBtnText"
+        android:onClick="incrementWaterText"
+        android:textSize="30sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/progress_text" />
+
+    <EditText
+        android:inputType="number"
+        android:id="@+id/enter_water_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/increment_water_btn"
+        app:layout_constraintRight_toLeftOf="@id/oz_text"
+        android:height="50dp"
+        android:width="120dp"
+        android:hint="Enter water"/>
+
+    <TextView
+        android:id="@+id/oz_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="oz"
+        app:layout_constraintTop_toBottomOf="@id/increment_water_btn"
+        android:paddingEnd="8dp"
+        android:height="40dp"
+        android:textSize="30sp"
+        android:gravity="bottom"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/decrement_water_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:onClick="decrementWaterText"
+        android:background="@drawable/decrease_button"
+        android:text="-"
+        android:textColor="@color/colorBtnText"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="@id/increment_water_btn"
+        app:layout_constraintTop_toBottomOf="@id/enter_water_text" />
+
+    <ImageView
+        android:id="@+id/cup_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/empty_cup"
+        app:layout_constraintTop_toTopOf="@id/increment_water_btn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="16dp"/>
+
+    <ImageButton
+        android:id="@+id/eight_oz_btn"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:onClick="setEightOz"
+        app:srcCompat="@drawable/eightoz_cup"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="16dp"
+        />
+
+    <ImageButton
+        android:id="@+id/twelve_oz_btn"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        app:srcCompat="@drawable/twelveoz_cup"
+        android:onClick="setTwelveOz"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <ImageButton
+        android:id="@+id/seventeen_oz_btn"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:onClick="setSeventeenOz"
+        app:srcCompat="@drawable/seventeeenoz_cup"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="16dp"/>
+
+
+</android.support.constraint.ConstraintLayout>
